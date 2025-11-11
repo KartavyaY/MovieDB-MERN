@@ -1,0 +1,26 @@
+{
+  "name": "movie-browser-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack movie browser application with React frontend and Node.js backend",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "frontend:build": "cd frontend && npm run build",
+    "backend:seed": "cd backend && npm run seed",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "setup": "npm run install:all && npm run backend:seed",
+    "start": "npm run backend:start & npm run frontend:dev",
+    "build": "npm run frontend:build"
+  },
+  "keywords": ["react", "nodejs", "mongodb", "firebase", "movies", "fullstack"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
