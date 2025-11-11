@@ -19,6 +19,10 @@ dist-ssr
 .env.test.local
 .env.production.local
 
+# Firebase service account keys (sensitive credentials)
+*firebase-adminsdk*.json
+movie-app-mern-firebase-adminsdk-fbsvc-*.json
+
 # Editor directories and files
 .vscode/
 *.code-workspace
