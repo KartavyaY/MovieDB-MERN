@@ -19,6 +19,9 @@ dist-ssr
 .env.test.local
 .env.production.local
 
+#gemini-api-key
+moviedb-gemini-api-key*.txt
+
 # Firebase service account keys (sensitive credentials)
 *firebase-adminsdk*.json
 movie-app-mern-firebase-adminsdk-fbsvc-*.json
