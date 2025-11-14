@@ -1,0 +1,14 @@
+{
+  "workspace": {
+    "id": "5f81f178-acdb-4b14-82f8-c67fdf5b41df"
+  },
+  "entities": {
+    "collections": [
+      "../postman/collections/WF-NoSQL-MERN.postman_collection.json"
+    ],
+    "environments": [],
+    "specs": [],
+    "flows": [],
+    "globals": []
+  }
+}

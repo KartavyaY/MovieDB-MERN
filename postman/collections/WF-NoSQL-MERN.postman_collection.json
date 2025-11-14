@@ -1,0 +1,2036 @@
+{
+  "info": {
+    "_postman_id": "11f5ac10-5c94-4148-94c0-ddc3986a78d3",
+    "name": "WF-NoSQL-MERN",
+    "description": "#This is a complete API documention for MovieDB-MERN\n\n[https://github.com/KartavyaY/MovieDB-MERN](https://github.com/KartavyaY/MovieDB-MERN)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46939201",
+    "_collection_link": "https://kartavyayadav.postman.co/workspace/5f81f178-acdb-4b14-82f8-c67fdf5b41df/collection/46939201-11f5ac10-5c94-4148-94c0-ddc3986a78d3?action=share&source=collection_link&creator=46939201"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "getProfile",
+          "id": "ec71df0d-29ed-4c6c-ad47-a7b25765112f",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM4MDI5MzRmZTBlZWM0NmE1ZWQwMDA2ZDE0YTFiYWIwMWUzNDUwODMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiS2FydGF2eWEgWWFkYXYiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2RtUmtWTW14TjJhU21aSndzb19aZEs0YjNyb0w4OV9pcXA0aGhCd3dxZzg0SFU5cTI9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbW92aWUtYXBwLW1lcm4iLCJhdWQiOiJtb3ZpZS1hcHAtbWVybiIsImF1dGhfdGltZSI6MTc2MzA1NTI2OCwidXNlcl9pZCI6ImxVd1ZRRU5JWk1UbjQ3Y3JLM3FIbklEY2xrVTIiLCJzdWIiOiJsVXdWUUVOSVpNVG40N2NySzNxSG5JRGNsa1UyIiwiaWF0IjoxNzYzMDU1MjY4LCJleHAiOjE3NjMwNTg4NjgsImVtYWlsIjoiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTMxMTMzNDQxNTk1NDgzOTU1MDkiXSwiZW1haWwiOlsiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.aoE_kQ79xORqGHt38a3YdYZnQoMahDCI9X8PQvqi-a4EM28HxxLQQQVoldzrASxWHZbqVdQaMezsflN9lBxd3mYGNDxhzuLs_UWZS4Cf30mJBGmW5oKRnZSBQ7RWkhgX0KiDLY9395A5GzfroE80ajg2Vkg3zjesNSeg5Xih4hOjhozXB4YkLuH1TgZIbl1bZ5d90zi1VmqFuOo11fklGfPCbOMKXtggqzMNoRzHPNKf-kV7s4X_VoaLvZG6v7PPmKpMClfUXNtsfgxUlw1GmmWniKY9FVT5dySD9luVdNu34Huvlcome2lkr8SdrrKn6j3xG5d7WOBfPIl3heELOA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5001/api/users/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "users",
+                "profile"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "49c5b307-4289-4d52-afa6-f357567680dc",
+              "name": "profileWithBearer",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5001/api/users/profile",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "89"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 17:35:01 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763056151"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "329"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"149-sTQFMWLE8A48IHTEbiZrLx9nco4\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": \"69130054c5f50d8dad6deb18\",\n            \"email\": \"buddy.kartavya@gmail.com\",\n            \"displayName\": \"Kartavya Yadav\",\n            \"photoURL\": \"https://lh3.googleusercontent.com/a/ACg8ocKdmRkVMmxN2aSmZJwso_ZdK4b3roL89_iqp4hhBwwqg84HU9q2=s96-c\",\n            \"watchlist\": [],\n            \"preferences\": {\n                \"favoriteGenres\": [],\n                \"theme\": \"auto\"\n            },\n            \"watchlistCount\": 0\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "postProfile",
+          "id": "b6203937-d5b9-4ccd-b0c7-a0ee4bebf34a",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM4MDI5MzRmZTBlZWM0NmE1ZWQwMDA2ZDE0YTFiYWIwMWUzNDUwODMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiS2FydGF2eWEgWWFkYXYiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2RtUmtWTW14TjJhU21aSndzb19aZEs0YjNyb0w4OV9pcXA0aGhCd3dxZzg0SFU5cTI9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbW92aWUtYXBwLW1lcm4iLCJhdWQiOiJtb3ZpZS1hcHAtbWVybiIsImF1dGhfdGltZSI6MTc2MzA1NTI2OCwidXNlcl9pZCI6ImxVd1ZRRU5JWk1UbjQ3Y3JLM3FIbklEY2xrVTIiLCJzdWIiOiJsVXdWUUVOSVpNVG40N2NySzNxSG5JRGNsa1UyIiwiaWF0IjoxNzYzMDU1MjY4LCJleHAiOjE3NjMwNTg4NjgsImVtYWlsIjoiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTMxMTMzNDQxNTk1NDgzOTU1MDkiXSwiZW1haWwiOlsiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.aoE_kQ79xORqGHt38a3YdYZnQoMahDCI9X8PQvqi-a4EM28HxxLQQQVoldzrASxWHZbqVdQaMezsflN9lBxd3mYGNDxhzuLs_UWZS4Cf30mJBGmW5oKRnZSBQ7RWkhgX0KiDLY9395A5GzfroE80ajg2Vkg3zjesNSeg5Xih4hOjhozXB4YkLuH1TgZIbl1bZ5d90zi1VmqFuOo11fklGfPCbOMKXtggqzMNoRzHPNKf-kV7s4X_VoaLvZG6v7PPmKpMClfUXNtsfgxUlw1GmmWniKY9FVT5dySD9luVdNu34Huvlcome2lkr8SdrrKn6j3xG5d7WOBfPIl3heELOA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\": \"test@example.com\", \"displayName\": \"Test User\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/users/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "users",
+                "profile"
+              ]
+            },
+            "description": "Generated from cURL: curl -X POST \"http://localhost:5001/api/users/profile\" \\\n  -H \"Authorization: Bearer YOUR_FIREBASE_JWT_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"test@example.com\", \"displayName\": \"Test User\"}'"
+          },
+          "response": [
+            {
+              "id": "edca2edc-0bcf-4660-b205-27263fe906cc",
+              "name": "updateProfile",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"email\": \"test@example.com\", \"displayName\": \"Test User\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5001/api/users/profile",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "95"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 17:48:08 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763056364"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "146"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"92-zbbWL/RwtV0VtZKtgIHWvacbGF0\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": \"69130054c5f50d8dad6deb18\",\n            \"email\": \"buddy.kartavya@gmail.com\",\n            \"displayName\": \"Test User\",\n            \"watchlistCount\": 0\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "addToWatchlist",
+          "id": "aed37702-1a47-47b5-ad5b-6763b7e28d3a",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"movieId\": 123}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/users/watchlist",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "users",
+                "watchlist"
+              ]
+            },
+            "description": "Generated from cURL: curl -X POST \"http://localhost:5001/api/users/watchlist\" \\\n  -H \"Authorization: Bearer YOUR_FIREBASE_JWT_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"movieId\": 123}'"
+          },
+          "response": [
+            {
+              "id": "a9ec7b67-05c5-45e0-809b-5087047de078",
+              "name": "addToWatchlist",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"movieId\": 2}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5001/api/users/watchlist",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "users",
+                    "watchlist"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "88"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 17:50:33 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763056364"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "81"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"51-PcHP+HofuyPYx6rUwLpjkbuHkwo\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Movie added to watchlist\",\n        \"watchlistCount\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "getWatchlist",
+          "id": "677a85d7-4f3e-467b-98f6-cb6b739fb1db",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM4MDI5MzRmZTBlZWM0NmE1ZWQwMDA2ZDE0YTFiYWIwMWUzNDUwODMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiS2FydGF2eWEgWWFkYXYiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2RtUmtWTW14TjJhU21aSndzb19aZEs0YjNyb0w4OV9pcXA0aGhCd3dxZzg0SFU5cTI9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbW92aWUtYXBwLW1lcm4iLCJhdWQiOiJtb3ZpZS1hcHAtbWVybiIsImF1dGhfdGltZSI6MTc2MzA1NTI2OCwidXNlcl9pZCI6ImxVd1ZRRU5JWk1UbjQ3Y3JLM3FIbklEY2xrVTIiLCJzdWIiOiJsVXdWUUVOSVpNVG40N2NySzNxSG5JRGNsa1UyIiwiaWF0IjoxNzYzMDU1MjY4LCJleHAiOjE3NjMwNTg4NjgsImVtYWlsIjoiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTMxMTMzNDQxNTk1NDgzOTU1MDkiXSwiZW1haWwiOlsiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.aoE_kQ79xORqGHt38a3YdYZnQoMahDCI9X8PQvqi-a4EM28HxxLQQQVoldzrASxWHZbqVdQaMezsflN9lBxd3mYGNDxhzuLs_UWZS4Cf30mJBGmW5oKRnZSBQ7RWkhgX0KiDLY9395A5GzfroE80ajg2Vkg3zjesNSeg5Xih4hOjhozXB4YkLuH1TgZIbl1bZ5d90zi1VmqFuOo11fklGfPCbOMKXtggqzMNoRzHPNKf-kV7s4X_VoaLvZG6v7PPmKpMClfUXNtsfgxUlw1GmmWniKY9FVT5dySD9luVdNu34Huvlcome2lkr8SdrrKn6j3xG5d7WOBfPIl3heELOA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/users/watchlist",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "users",
+                "watchlist"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e7d79ca4-12b3-4153-92db-d9da6bb7667b",
+              "name": "getWatchlist",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:5001/api/users/watchlist",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "users",
+                    "watchlist"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "98"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 17:53:03 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763057264"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1189"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4a5-HKugA8ZiG0AxmBwL0GiH3Xm+qwU\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"watchlist\": [\n            {\n                \"_id\": \"6913087b6d019a70be65e62b\",\n                \"id\": 2,\n                \"tag\": \"movie\",\n                \"name\": \"The Shawshank Redemption\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 9.3,\n                \"tomatometer\": \"91%\",\n                \"metacritic\": 80,\n                \"trailer\": \"https://www.youtube.com/watch?v=PLl99DlL6b4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e630\",\n                \"id\": 7,\n                \"tag\": \"tvseries\",\n                \"name\": \"Rick and Morty\",\n                \"genre\": [\n                    \"Animation\",\n                    \"Adventure\",\n                    \"Comedy\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"The adventures of a cynical mad scientist and his good-hearted but easily influenced grandson as they travel through dimensions and cause havoc.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/original/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg\",\n                \"imdb\": 9.1,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 87,\n                \"trailer\": \"https://www.youtube.com/watch?v=wh10k2gW34A\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "removeFromWatchlist",
+          "id": "c662c397-4acd-4f8e-b668-40b07bffc86a",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM4MDI5MzRmZTBlZWM0NmE1ZWQwMDA2ZDE0YTFiYWIwMWUzNDUwODMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiS2FydGF2eWEgWWFkYXYiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2RtUmtWTW14TjJhU21aSndzb19aZEs0YjNyb0w4OV9pcXA0aGhCd3dxZzg0SFU5cTI9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbW92aWUtYXBwLW1lcm4iLCJhdWQiOiJtb3ZpZS1hcHAtbWVybiIsImF1dGhfdGltZSI6MTc2MzA1NTI2OCwidXNlcl9pZCI6ImxVd1ZRRU5JWk1UbjQ3Y3JLM3FIbklEY2xrVTIiLCJzdWIiOiJsVXdWUUVOSVpNVG40N2NySzNxSG5JRGNsa1UyIiwiaWF0IjoxNzYzMDU1MjY4LCJleHAiOjE3NjMwNTg4NjgsImVtYWlsIjoiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTMxMTMzNDQxNTk1NDgzOTU1MDkiXSwiZW1haWwiOlsiYnVkZHkua2FydGF2eWFAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.aoE_kQ79xORqGHt38a3YdYZnQoMahDCI9X8PQvqi-a4EM28HxxLQQQVoldzrASxWHZbqVdQaMezsflN9lBxd3mYGNDxhzuLs_UWZS4Cf30mJBGmW5oKRnZSBQ7RWkhgX0KiDLY9395A5GzfroE80ajg2Vkg3zjesNSeg5Xih4hOjhozXB4YkLuH1TgZIbl1bZ5d90zi1VmqFuOo11fklGfPCbOMKXtggqzMNoRzHPNKf-kV7s4X_VoaLvZG6v7PPmKpMClfUXNtsfgxUlw1GmmWniKY9FVT5dySD9luVdNu34Huvlcome2lkr8SdrrKn6j3xG5d7WOBfPIl3heELOA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/users/watchlist/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "users",
+                "watchlist",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fc590458-7904-4fc1-874b-021573e9a112",
+              "name": "removeFromWatchlist",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_FIREBASE_JWT_TOKEN"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:5001/api/users/watchlist/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "users",
+                    "watchlist",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "97"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 17:54:31 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763057264"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "85"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"55-YayTiVkORNO8p3+HPxCWN46jPfM\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Movie removed from watchlist\",\n        \"watchlistCount\": 1\n    }\n}"
+            }
+          ]
+        }
+      ],
+      "id": "a49690ad-2cd0-435a-a092-b43c5aac17a3",
+      "description": "User APIs"
+    },
+    {
+      "name": "Movies",
+      "item": [
+        {
+          "name": "getAllMovies",
+          "id": "7260d1f1-5e47-4b44-84d1-588fbe394e3a",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "id": "9e6f8938-a29e-4522-a94a-774dc51ab0c3",
+              "name": "getAllMovies",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "99"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:31:02 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763052158"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "28426"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"6f0a-1zwNspwKJay3+A1R39ru/k5r1ho\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"movies\": [\n            {\n                \"_id\": \"6913087b6d019a70be65e62a\",\n                \"id\": 1,\n                \"tag\": \"tvseries\",\n                \"name\": \"Breaking Bad\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg\",\n                \"imdb\": 9.5,\n                \"tomatometer\": \"96%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=HhesaQXLuRY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62b\",\n                \"id\": 2,\n                \"tag\": \"movie\",\n                \"name\": \"The Shawshank Redemption\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 9.3,\n                \"tomatometer\": \"91%\",\n                \"metacritic\": 80,\n                \"trailer\": \"https://www.youtube.com/watch?v=PLl99DlL6b4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62c\",\n                \"id\": 3,\n                \"tag\": \"tvseries\",\n                \"name\": \"The Wire\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"The drug scene in Baltimore, as seen through the eyes of drug dealers and law enforcement officers.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/4lbclFySvugI51fwsyxBTOm4DqK.jpg\",\n                \"imdb\": 9.3,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 91,\n                \"trailer\": \"https://www.youtube.com/watch?v=9qK-O3cud-0\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62d\",\n                \"id\": 4,\n                \"tag\": \"tvseries\",\n                \"name\": \"Game of Thrones\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Drama\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg\",\n                \"imdb\": 9.3,\n                \"tomatometer\": \"89%\",\n                \"metacritic\": 82,\n                \"trailer\": \"https://www.youtube.com/watch?v=KPLWWIOooZE\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62e\",\n                \"id\": 5,\n                \"tag\": \"movie\",\n                \"name\": \"The Godfather\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR8,0,380,562_.jpg\",\n                \"imdb\": 9.2,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=sY1S34973zA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62f\",\n                \"id\": 6,\n                \"tag\": \"tvseries\",\n                \"name\": \"The Sopranos\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life, which he discusses with his psychiatrist.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/rTc7ZXdroqjkKivFPvCPX0Ru7uw.jpg\",\n                \"imdb\": 9.2,\n                \"tomatometer\": \"92%\",\n                \"metacritic\": 94,\n                \"trailer\": \"https://www.youtube.com/watch?v=r6DUw4g3_PA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e630\",\n                \"id\": 7,\n                \"tag\": \"tvseries\",\n                \"name\": \"Rick and Morty\",\n                \"genre\": [\n                    \"Animation\",\n                    \"Adventure\",\n                    \"Comedy\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"The adventures of a cynical mad scientist and his good-hearted but easily influenced grandson as they travel through dimensions and cause havoc.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/original/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg\",\n                \"imdb\": 9.1,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 87,\n                \"trailer\": \"https://www.youtube.com/watch?v=wh10k2gW34A\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e631\",\n                \"id\": 8,\n                \"tag\": \"movie\",\n                \"name\": \"The Dark Knight\",\n                \"genre\": [\n                    \"Action\",\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"Batman battles the Joker, a criminal mastermind who plunges Gotham City into chaos.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 84,\n                \"trailer\": \"https://www.youtube.com/watch?v=EXeTwQWrcwY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e632\",\n                \"id\": 9,\n                \"tag\": \"movie\",\n                \"name\": \"Schindler's List\",\n                \"genre\": [\n                    \"Biography\",\n                    \"Drama\",\n                    \"History\"\n                ],\n                \"about\": \"In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 95,\n                \"trailer\": \"https://www.youtube.com/watch?v=gG22XNhtnoY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e633\",\n                \"id\": 10,\n                \"tag\": \"movie\",\n                \"name\": \"The Godfather Part II\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"The early life and career of Vito Corleone in 1920s New York City is portrayed while his son, Michael, expands and tightens his grip on the family crime syndicate.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR7,0,380,562_.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"96%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=9O1Iy9od7-A\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e634\",\n                \"id\": 11,\n                \"tag\": \"tvseries\",\n                \"name\": \"The Twilight Zone\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Fantasy\",\n                    \"Horror\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An anthology series dealing with various paranormal and science fiction stories, often with a twist ending.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/7uY4pCOxbEdv4M8jTE4uMPVoSIW.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 80,\n                \"trailer\": \"https://www.youtube.com/watch?v=c6Y4z22Jz_A\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e635\",\n                \"id\": 12,\n                \"tag\": \"tvseries\",\n                \"name\": \"The Office (US)\",\n                \"genre\": [\n                    \"Comedy\"\n                ],\n                \"about\": \"A mockumentary about the daily lives of a group of office workers at the Scranton branch of the Dunder Mifflin Paper Company.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"81%\",\n                \"metacritic\": 66,\n                \"trailer\": \"https://www.youtube.com/watch?v=cGo_PEsS2kM\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e636\",\n                \"id\": 13,\n                \"tag\": \"tvseries\",\n                \"name\": \"Seinfeld\",\n                \"genre\": [\n                    \"Comedy\"\n                ],\n                \"about\": \"The 'show about nothing' follows the everyday lives of Jerry Seinfeld and his quirky group of friends.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/aCw8ONfyz3AhngVQa1E2Ss4KSUQ.jpg\",\n                \"imdb\": 8.9,\n                \"tomatometer\": \"92%\",\n                \"metacritic\": 86,\n                \"trailer\": \"https://www.youtube.com/watch?v=h-3-B9s3g24\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e637\",\n                \"id\": 14,\n                \"tag\": \"tvseries\",\n                \"name\": \"Friends\",\n                \"genre\": [\n                    \"Comedy\",\n                    \"Romance\"\n                ],\n                \"about\": \"Follows the personal and professional lives of six twenty-somethings living in Manhattan.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/original/f496cm9enuEsZkSPzCwnTESEK5s.jpg\",\n                \"imdb\": 8.9,\n                \"tomatometer\": \"79%\",\n                \"metacritic\": 65,\n                \"trailer\": \"https://www.youtube.com/watch?v=hDNNBvo0rII\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e638\",\n                \"id\": 15,\n                \"tag\": \"tvseries\",\n                \"name\": \"The West Wing\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"A look into the inner workings of the White House and the lives of the President and his senior staff.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/yqDWr5NAE7m1IWrygYwLyEB6pN0.jpg\",\n                \"imdb\": 8.9,\n                \"tomatometer\": \"92%\",\n                \"metacritic\": 87,\n                \"trailer\": \"https://www.youtube.com/watch?v=21csaSonYp8\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e639\",\n                \"id\": 16,\n                \"tag\": \"tvseries\",\n                \"name\": \"Fargo\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An anthology series inspired by the 1996 film of the same name, featuring an interconnected web of crime stories.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/6U9CPeD8obHzweikFhiLhpc7YBT.jpg\",\n                \"imdb\": 8.9,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 85,\n                \"trailer\": \"https://www.youtube.com/watch?v=gKs8DzjPDMU\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e63a\",\n                \"id\": 17,\n                \"tag\": \"tvseries\",\n                \"name\": \"Cowboy Bebop\",\n                \"genre\": [\n                    \"Animation\",\n                    \"Action\",\n                    \"Adventure\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"The adventures of a group of bounty hunters traveling the solar system in search of their next score.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/xDiXDfZwC6XYC6fxHI1jl3A3Ill.jpg\",\n                \"imdb\": 8.9,\n                \"tomatometer\": \"88%\",\n                \"metacritic\": 71,\n                \"trailer\": \"https://www.youtube.com/watch?v=qig4KOK2R2g\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e63b\",\n                \"id\": 18,\n                \"tag\": \"movie\",\n                \"name\": \"Inception\",\n                \"genre\": [\n                    \"Sci-Fi\",\n                    \"Thriller\"\n                ],\n                \"about\": \"A skilled thief who steals secrets through dream-sharing technology is given a chance at redemption if he can plant an idea into a target's subconscious.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"87%\",\n                \"metacritic\": 74,\n                \"trailer\": \"https://www.youtube.com/watch?v=YoHD9XEInc0\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e63c\",\n                \"id\": 19,\n                \"tag\": \"tvseries\",\n                \"name\": \"Twin Peaks\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\",\n                    \"Mystery\"\n                ],\n                \"about\": \"An eccentric FBI agent investigates the murder of a homecoming queen in the small, quirky town of Twin Peaks, Washington.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/lA9CNSdo50iQPZ8A2fyVpMvJZAf.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"90%\",\n                \"metacritic\": 81,\n                \"trailer\": \"https://www.youtube.com/watch?v=XjsLFg2g4yY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e63d\",\n                \"id\": 20,\n                \"tag\": \"tvseries\",\n                \"name\": \"BoJack Horseman\",\n                \"genre\": [\n                    \"Animation\",\n                    \"Comedy\",\n                    \"Drama\"\n                ],\n                \"about\": \"BoJack Horseman, a cynical, washed-up celebrity horse, tries to navigate life in Hollywoo while dealing with depression and self-loathing.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/6JFWzlChcGgLiIUo2COgNlWGFKy.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 87,\n                \"trailer\": \"https://www.youtube.com/watch?v=i1eJMig5Ik4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e63e\",\n                \"id\": 21,\n                \"tag\": \"tvseries\",\n                \"name\": \"Better Call Saul\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"The trials and tribulations of criminal lawyer Jimmy McGill in the years leading up to his fateful run-in with Walter White and Jesse Pinkman.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 93,\n                \"trailer\": \"https://www.youtube.com/watch?v=HN4KfDWLUBs\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e63f\",\n                \"id\": 22,\n                \"tag\": \"tvseries\",\n                \"name\": \"Black Mirror\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Sci-Fi\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An anthology series exploring a twisted, high-tech near-future where humanity's greatest innovations and darkest instincts collide.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"84%\",\n                \"metacritic\": 78,\n                \"trailer\": \"https://www.youtube.com/watch?v=jDiYGjp5iFg\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e640\",\n                \"id\": 23,\n                \"tag\": \"tvseries\",\n                \"name\": \"Succession\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"The Roy family, owners of a global media empire, struggle with power, politics, and family loyalty as their aging patriarch considers his successor.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/z0XiwdrCQ9yVIr4O0pxzaAYRxdW.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 92,\n                \"trailer\": \"https://www.youtube.com/watch?v=OZK-i2uNlhw\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e641\",\n                \"id\": 24,\n                \"tag\": \"tvseries\",\n                \"name\": \"It's Always Sunny in Philadelphia\",\n                \"genre\": [\n                    \"Comedy\"\n                ],\n                \"about\": \"Four narcissistic friends run a struggling Irish pub in South Philadelphia, constantly engaging in selfish and often morally questionable schemes.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/o0tMMK33JqmtpcWw0H41cEr9xQB.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"95%\",\n                \"metacritic\": 75,\n                \"trailer\": \"https://www.youtube.com/watch?v=U3I53-k3-sY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e642\",\n                \"id\": 25,\n                \"tag\": \"movie\",\n                \"name\": \"The Matrix\",\n                \"genre\": [\n                    \"Action\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"A computer hacker learns about the true nature of his reality and his role in the war against its controllers.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 8.7,\n                \"tomatometer\": \"88%\",\n                \"metacritic\": 73,\n                \"trailer\": \"https://www.youtube.com/watch?v=vKQi3bBA1y8\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e643\",\n                \"id\": 26,\n                \"tag\": \"movie\",\n                \"name\": \"One Flew Over the Cuckoo's Nest\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Upon his commitment to a psychiatric hospital, a free-spirited rebel rallies the other patients against the oppressive Nurse Ratched.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 8.7,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 84,\n                \"trailer\": \"https://www.youtube.com/watch?v=2WSyJgydTsA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e644\",\n                \"id\": 27,\n                \"tag\": \"tvseries\",\n                \"name\": \"The Simpsons\",\n                \"genre\": [\n                    \"Animation\",\n                    \"Comedy\"\n                ],\n                \"about\": \"The satiric adventures of a working-class family in the misfit city of Springfield.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/uWpG7GqfKGQqX4YMAo3nv5OrglV.jpg\",\n                \"imdb\": 8.7,\n                \"tomatometer\": \"85%\",\n                \"metacritic\": 78,\n                \"trailer\": \"https://www.youtube.com/watch?v=XPG0MqIcby8\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e645\",\n                \"id\": 28,\n                \"tag\": \"tvseries\",\n                \"name\": \"Arrested Development\",\n                \"genre\": [\n                    \"Comedy\"\n                ],\n                \"about\": \"The Bluth family, a wealthy and eccentric group, must learn to live without their fortune after their patriarch is imprisoned.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/p4r4RD7RsNcJVoz0H6z3dBoTBtW.jpg\",\n                \"imdb\": 8.7,\n                \"tomatometer\": \"75%\",\n                \"metacritic\": 88,\n                \"trailer\": \"https://www.youtube.com/watch?v=vzVhPCMAxWQ\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e646\",\n                \"id\": 29,\n                \"tag\": \"movie\",\n                \"name\": \"Interstellar\",\n                \"genre\": [\n                    \"Adventure\",\n                    \"Drama\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"A team of explorers travels through a wormhole in space in an attempt to ensure humanity's survival.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"73%\",\n                \"metacritic\": 74,\n                \"trailer\": \"https://www.youtube.com/watch?v=zSWdZVtXT7E\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e647\",\n                \"id\": 30,\n                \"tag\": \"movie\",\n                \"name\": \"It's a Wonderful Life\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Family\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZjc4NDZhZWMtNGEzYS00ZWU2LThlM2ItNTA0YzQ0OTExMTE2XkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_QL75_UY562_CR3,0,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 89,\n                \"trailer\": \"https://www.youtube.com/watch?v=iLR3gZrU2Xo\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e648\",\n                \"id\": 31,\n                \"tag\": \"movie\",\n                \"name\": \"Star Wars: Episode IV - A New Hope\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the evil Darth Vader.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_QL75_UX380_CR0,9,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=1g3_CFmnU7k\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e649\",\n                \"id\": 32,\n                \"tag\": \"movie\",\n                \"name\": \"Casablanca\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Romance\",\n                    \"War\"\n                ],\n                \"about\": \"A cynical American expatriate meets his former lover and her husband, a Czech Resistance leader, in Morocco during the early days of World War II.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_QL75_UX380_CR0,5,380,562_.jpg\",\n                \"imdb\": 8.5,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=BkL9l7qovsE\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64a\",\n                \"id\": 33,\n                \"tag\": \"movie\",\n                \"name\": \"Psycho\",\n                \"genre\": [\n                    \"Horror\",\n                    \"Mystery\",\n                    \"Thriller\"\n                ],\n                \"about\": \"A Phoenix secretary embezzles money from her employer and goes on the run, checking into an isolated motel run by a disturbed young man.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 8.5,\n                \"tomatometer\": \"96%\",\n                \"metacritic\": 97,\n                \"trailer\": \"https://www.youtube.com/watch?v=0h5-bC4A6gA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64b\",\n                \"id\": 34,\n                \"tag\": \"movie\",\n                \"name\": \"Parasite\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.5,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 96,\n                \"trailer\": \"https://www.youtube.com/watch?v=5xH0HfJHsaY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64c\",\n                \"id\": 35,\n                \"tag\": \"movie\",\n                \"name\": \"Avengers: Endgame\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Drama\"\n                ],\n                \"about\": \"After the devastating events of Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 78,\n                \"trailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64d\",\n                \"id\": 36,\n                \"tag\": \"movie\",\n                \"name\": \"Joker\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An aspiring stand-up comedian grapples with mental illness and the harsh realities of Gotham, leading him down a dark path of transformation.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"69%\",\n                \"metacritic\": 59,\n                \"trailer\": \"https://www.youtube.com/watch?v=zAGVQLHvwOY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64e\",\n                \"id\": 37,\n                \"tag\": \"movie\",\n                \"name\": \"Sunset Boulevard\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Film-Noir\"\n                ],\n                \"about\": \"A young screenwriter becomes entangled in the delusional world of an aging silent film star, Norma Desmond.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTU0NTkyNzYwMF5BMl5BanBnXkFtZTgwMDU0NDk5MTI@._V1_QL75_UX380_CR0,5,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=ch_C4a9-k2g\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64f\",\n                \"id\": 38,\n                \"tag\": \"movie\",\n                \"name\": \"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb\",\n                \"genre\": [\n                    \"Comedy\",\n                    \"War\"\n                ],\n                \"about\": \"An insane general triggers a path to nuclear holocaust that a War Room full of politicians and generals frantically tries to stop.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZWI3ZTMxNjctMjdlNS00NmUwLWFiM2YtZDUyY2I3N2MxYTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,14,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 97,\n                \"trailer\": \"https://www.youtube.com/watch?v=QSs3Qo_t-MA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e650\",\n                \"id\": 39,\n                \"tag\": \"movie\",\n                \"name\": \"Apocalypse Now\",\n                \"genre\": [\n                    \"Drama\",\n                    \"War\"\n                ],\n                \"about\": \"A U.S. Army officer is sent on a mission to assassinate a renegade Colonel during the Vietnam War.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYmQyNTA1ZGItNjZjMi00NzFlLWEzMWEtNWMwN2Q2MjJhYzEyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_QL75_UX380_CR0,11,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 94,\n                \"trailer\": \"https://www.youtube.com/watch?v=9l-ViOOFH-s\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e651\",\n                \"id\": 40,\n                \"tag\": \"movie\",\n                \"name\": \"Citizen Kane\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Following the death of a publishing tycoon, news reporters scramble to uncover the meaning of his final utterance: 'Rosebud.'\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"99%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=8dxh3lwdOFw\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e652\",\n                \"id\": 41,\n                \"tag\": \"movie\",\n                \"name\": \"Lawrence of Arabia\",\n                \"genre\": [\n                    \"Adventure\",\n                    \"Biography\",\n                    \"Drama\"\n                ],\n                \"about\": \"The story of T.E. Lawrence, the English officer who successfully united diverse Arab tribes to fight the Turks in World War I.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_QL75_UY562_CR5,0,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=vOlRhGEhG7k\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e653\",\n                \"id\": 42,\n                \"tag\": \"movie\",\n                \"name\": \"Singin' in the Rain\",\n                \"genre\": [\n                    \"Comedy\",\n                    \"Musical\",\n                    \"Romance\"\n                ],\n                \"about\": \"A silent film star falls for a chorus girl just as the film industry transitions to talkies, creating hilarious complications.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZDRjNGViMjQtOThlMi00MTA3LThkYzQtNzJkYjBkMGE0YzE1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_QL75_UY562_CR3,0,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"100%\",\n                \"metacritic\": 96,\n                \"trailer\": \"https://www.youtube.com/watch?v=5_1gTUvXN6g\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e654\",\n                \"id\": 43,\n                \"tag\": \"movie\",\n                \"name\": \"2001: A Space Odyssey\",\n                \"genre\": [\n                    \"Adventure\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"Humanity finds a mysterious, obviously artificial, object buried on the Moon and, with the intelligent computer H.A.L. 9000, sets off on a quest.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"92%\",\n                \"metacritic\": 84,\n                \"trailer\": \"https://www.youtube.com/watch?v=oR_e9y-bka0\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e655\",\n                \"id\": 44,\n                \"tag\": \"movie\",\n                \"name\": \"To Kill a Mockingbird\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Atticus Finch, a lawyer in the Depression-era South, defends a black man accused of rape, and his children learn valuable lessons about prejudice and justice.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNmVmYzcwNzMtMWM1NS00MWIyLThlMDEtYzUwZDgzODE1NmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,9,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"92%\",\n                \"metacritic\": 88,\n                \"trailer\": \"https://www.youtube.com/watch?v=KR7loA_oziY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e656\",\n                \"id\": 45,\n                \"tag\": \"movie\",\n                \"name\": \"Double Indemnity\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Film-Noir\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An insurance salesman is seduced by a beautiful woman into a scheme to murder her husband for the insurance money.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BOTdlNjgyZGUtOTczYi00MDdhLTljZmMtYTEwZmRiOWFkYjRhXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 95,\n                \"trailer\": \"https://www.youtube.com/watch?v=yKrrAa2o9Eg\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e657\",\n                \"id\": 46,\n                \"tag\": \"movie\",\n                \"name\": \"North by Northwest\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Mystery\"\n                ],\n                \"about\": \"An advertising executive is mistaken for a government agent and pursued by foreign spies across the country.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZDA3NDExMTUtMDlhOC00MmQ5LWExZGUtYmI1NGVlZWI4OWNiXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX380_CR0,11,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=ek7T9Gyl_e4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e658\",\n                \"id\": 47,\n                \"tag\": \"movie\",\n                \"name\": \"Spider-Man: No Way Home\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"With his identity exposed, Peter Parker seeks Doctor Strange's help, but the spell goes wrong, opening the multiverse and bringing past foes into his world.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 71,\n                \"trailer\": \"https://www.youtube.com/watch?v=JfVOs4VSpmA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e659\",\n                \"id\": 48,\n                \"tag\": \"movie\",\n                \"name\": \"Some Like It Hot\",\n                \"genre\": [\n                    \"Comedy\",\n                    \"Music\",\n                    \"Romance\"\n                ],\n                \"about\": \"Two musicians witness a mob hit and disguise themselves as women to escape, joining an all-female band.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/hVIKyTK13AvOGv7ICmJjK44DTzp.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=rI_lUHut_u4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e65a\",\n                \"id\": 49,\n                \"tag\": \"movie\",\n                \"name\": \"All About Eve\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"A conniving young actress schemes her way to the top of the theater world, manipulating those around her.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTY2MTAzODI5NV5BMl5BanBnXkFtZTgwMjM4NzQ0MjE@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"99%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=L521yWTsK58\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e65b\",\n                \"id\": 50,\n                \"tag\": \"movie\",\n                \"name\": \"Raging Bull\",\n                \"genre\": [\n                    \"Biography\",\n                    \"Drama\",\n                    \"Sport\"\n                ],\n                \"about\": \"The tumultuous life of boxer Jake LaMotta, whose self-destructive tendencies alienate him from those closest to him.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1WV7WlTS8LI1L5NkCgjWT9GSW3O.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=yUp6d79WRVI\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 50,\n            \"total\": 52,\n            \"pages\": 2\n        }\n    }\n}"
+            },
+            {
+              "id": "7ad3d2b2-9230-432f-b626-262c59ba20fb",
+              "name": "getAllMoviesByTag",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies?tag=movie",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies"
+                  ],
+                  "query": [
+                    {
+                      "key": "tag",
+                      "value": "movie"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "91"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:42:40 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763052771"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "19198"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4afe-rbLZrcWpGRR2x0GuJ83DrSEywv8\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"movies\": [\n            {\n                \"_id\": \"6913087b6d019a70be65e62b\",\n                \"id\": 2,\n                \"tag\": \"movie\",\n                \"name\": \"The Shawshank Redemption\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 9.3,\n                \"tomatometer\": \"91%\",\n                \"metacritic\": 80,\n                \"trailer\": \"https://www.youtube.com/watch?v=PLl99DlL6b4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62e\",\n                \"id\": 5,\n                \"tag\": \"movie\",\n                \"name\": \"The Godfather\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR8,0,380,562_.jpg\",\n                \"imdb\": 9.2,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=sY1S34973zA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e631\",\n                \"id\": 8,\n                \"tag\": \"movie\",\n                \"name\": \"The Dark Knight\",\n                \"genre\": [\n                    \"Action\",\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"Batman battles the Joker, a criminal mastermind who plunges Gotham City into chaos.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 84,\n                \"trailer\": \"https://www.youtube.com/watch?v=EXeTwQWrcwY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e632\",\n                \"id\": 9,\n                \"tag\": \"movie\",\n                \"name\": \"Schindler's List\",\n                \"genre\": [\n                    \"Biography\",\n                    \"Drama\",\n                    \"History\"\n                ],\n                \"about\": \"In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 95,\n                \"trailer\": \"https://www.youtube.com/watch?v=gG22XNhtnoY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e633\",\n                \"id\": 10,\n                \"tag\": \"movie\",\n                \"name\": \"The Godfather Part II\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"The early life and career of Vito Corleone in 1920s New York City is portrayed while his son, Michael, expands and tightens his grip on the family crime syndicate.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR7,0,380,562_.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"96%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=9O1Iy9od7-A\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e63b\",\n                \"id\": 18,\n                \"tag\": \"movie\",\n                \"name\": \"Inception\",\n                \"genre\": [\n                    \"Sci-Fi\",\n                    \"Thriller\"\n                ],\n                \"about\": \"A skilled thief who steals secrets through dream-sharing technology is given a chance at redemption if he can plant an idea into a target's subconscious.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.8,\n                \"tomatometer\": \"87%\",\n                \"metacritic\": 74,\n                \"trailer\": \"https://www.youtube.com/watch?v=YoHD9XEInc0\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e642\",\n                \"id\": 25,\n                \"tag\": \"movie\",\n                \"name\": \"The Matrix\",\n                \"genre\": [\n                    \"Action\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"A computer hacker learns about the true nature of his reality and his role in the war against its controllers.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 8.7,\n                \"tomatometer\": \"88%\",\n                \"metacritic\": 73,\n                \"trailer\": \"https://www.youtube.com/watch?v=vKQi3bBA1y8\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e643\",\n                \"id\": 26,\n                \"tag\": \"movie\",\n                \"name\": \"One Flew Over the Cuckoo's Nest\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Upon his commitment to a psychiatric hospital, a free-spirited rebel rallies the other patients against the oppressive Nurse Ratched.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 8.7,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 84,\n                \"trailer\": \"https://www.youtube.com/watch?v=2WSyJgydTsA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e646\",\n                \"id\": 29,\n                \"tag\": \"movie\",\n                \"name\": \"Interstellar\",\n                \"genre\": [\n                    \"Adventure\",\n                    \"Drama\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"A team of explorers travels through a wormhole in space in an attempt to ensure humanity's survival.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"73%\",\n                \"metacritic\": 74,\n                \"trailer\": \"https://www.youtube.com/watch?v=zSWdZVtXT7E\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e647\",\n                \"id\": 30,\n                \"tag\": \"movie\",\n                \"name\": \"It's a Wonderful Life\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Family\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZjc4NDZhZWMtNGEzYS00ZWU2LThlM2ItNTA0YzQ0OTExMTE2XkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_QL75_UY562_CR3,0,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 89,\n                \"trailer\": \"https://www.youtube.com/watch?v=iLR3gZrU2Xo\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e648\",\n                \"id\": 31,\n                \"tag\": \"movie\",\n                \"name\": \"Star Wars: Episode IV - A New Hope\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the evil Darth Vader.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_QL75_UX380_CR0,9,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=1g3_CFmnU7k\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e649\",\n                \"id\": 32,\n                \"tag\": \"movie\",\n                \"name\": \"Casablanca\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Romance\",\n                    \"War\"\n                ],\n                \"about\": \"A cynical American expatriate meets his former lover and her husband, a Czech Resistance leader, in Morocco during the early days of World War II.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_QL75_UX380_CR0,5,380,562_.jpg\",\n                \"imdb\": 8.5,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=BkL9l7qovsE\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64a\",\n                \"id\": 33,\n                \"tag\": \"movie\",\n                \"name\": \"Psycho\",\n                \"genre\": [\n                    \"Horror\",\n                    \"Mystery\",\n                    \"Thriller\"\n                ],\n                \"about\": \"A Phoenix secretary embezzles money from her employer and goes on the run, checking into an isolated motel run by a disturbed young man.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 8.5,\n                \"tomatometer\": \"96%\",\n                \"metacritic\": 97,\n                \"trailer\": \"https://www.youtube.com/watch?v=0h5-bC4A6gA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64b\",\n                \"id\": 34,\n                \"tag\": \"movie\",\n                \"name\": \"Parasite\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.5,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 96,\n                \"trailer\": \"https://www.youtube.com/watch?v=5xH0HfJHsaY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64c\",\n                \"id\": 35,\n                \"tag\": \"movie\",\n                \"name\": \"Avengers: Endgame\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Drama\"\n                ],\n                \"about\": \"After the devastating events of Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 78,\n                \"trailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64d\",\n                \"id\": 36,\n                \"tag\": \"movie\",\n                \"name\": \"Joker\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An aspiring stand-up comedian grapples with mental illness and the harsh realities of Gotham, leading him down a dark path of transformation.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"69%\",\n                \"metacritic\": 59,\n                \"trailer\": \"https://www.youtube.com/watch?v=zAGVQLHvwOY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64e\",\n                \"id\": 37,\n                \"tag\": \"movie\",\n                \"name\": \"Sunset Boulevard\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Film-Noir\"\n                ],\n                \"about\": \"A young screenwriter becomes entangled in the delusional world of an aging silent film star, Norma Desmond.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTU0NTkyNzYwMF5BMl5BanBnXkFtZTgwMDU0NDk5MTI@._V1_QL75_UX380_CR0,5,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=ch_C4a9-k2g\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e64f\",\n                \"id\": 38,\n                \"tag\": \"movie\",\n                \"name\": \"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb\",\n                \"genre\": [\n                    \"Comedy\",\n                    \"War\"\n                ],\n                \"about\": \"An insane general triggers a path to nuclear holocaust that a War Room full of politicians and generals frantically tries to stop.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZWI3ZTMxNjctMjdlNS00NmUwLWFiM2YtZDUyY2I3N2MxYTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,14,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 97,\n                \"trailer\": \"https://www.youtube.com/watch?v=QSs3Qo_t-MA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e650\",\n                \"id\": 39,\n                \"tag\": \"movie\",\n                \"name\": \"Apocalypse Now\",\n                \"genre\": [\n                    \"Drama\",\n                    \"War\"\n                ],\n                \"about\": \"A U.S. Army officer is sent on a mission to assassinate a renegade Colonel during the Vietnam War.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYmQyNTA1ZGItNjZjMi00NzFlLWEzMWEtNWMwN2Q2MjJhYzEyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_QL75_UX380_CR0,11,380,562_.jpg\",\n                \"imdb\": 8.4,\n                \"tomatometer\": \"98%\",\n                \"metacritic\": 94,\n                \"trailer\": \"https://www.youtube.com/watch?v=9l-ViOOFH-s\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e651\",\n                \"id\": 40,\n                \"tag\": \"movie\",\n                \"name\": \"Citizen Kane\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Following the death of a publishing tycoon, news reporters scramble to uncover the meaning of his final utterance: 'Rosebud.'\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"99%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=8dxh3lwdOFw\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e652\",\n                \"id\": 41,\n                \"tag\": \"movie\",\n                \"name\": \"Lawrence of Arabia\",\n                \"genre\": [\n                    \"Adventure\",\n                    \"Biography\",\n                    \"Drama\"\n                ],\n                \"about\": \"The story of T.E. Lawrence, the English officer who successfully united diverse Arab tribes to fight the Turks in World War I.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_QL75_UY562_CR5,0,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 100,\n                \"trailer\": \"https://www.youtube.com/watch?v=vOlRhGEhG7k\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e653\",\n                \"id\": 42,\n                \"tag\": \"movie\",\n                \"name\": \"Singin' in the Rain\",\n                \"genre\": [\n                    \"Comedy\",\n                    \"Musical\",\n                    \"Romance\"\n                ],\n                \"about\": \"A silent film star falls for a chorus girl just as the film industry transitions to talkies, creating hilarious complications.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZDRjNGViMjQtOThlMi00MTA3LThkYzQtNzJkYjBkMGE0YzE1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_QL75_UY562_CR3,0,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"100%\",\n                \"metacritic\": 96,\n                \"trailer\": \"https://www.youtube.com/watch?v=5_1gTUvXN6g\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e654\",\n                \"id\": 43,\n                \"tag\": \"movie\",\n                \"name\": \"2001: A Space Odyssey\",\n                \"genre\": [\n                    \"Adventure\",\n                    \"Sci-Fi\"\n                ],\n                \"about\": \"Humanity finds a mysterious, obviously artificial, object buried on the Moon and, with the intelligent computer H.A.L. 9000, sets off on a quest.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"92%\",\n                \"metacritic\": 84,\n                \"trailer\": \"https://www.youtube.com/watch?v=oR_e9y-bka0\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e655\",\n                \"id\": 44,\n                \"tag\": \"movie\",\n                \"name\": \"To Kill a Mockingbird\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"Atticus Finch, a lawyer in the Depression-era South, defends a black man accused of rape, and his children learn valuable lessons about prejudice and justice.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BNmVmYzcwNzMtMWM1NS00MWIyLThlMDEtYzUwZDgzODE1NmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,9,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"92%\",\n                \"metacritic\": 88,\n                \"trailer\": \"https://www.youtube.com/watch?v=KR7loA_oziY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e656\",\n                \"id\": 45,\n                \"tag\": \"movie\",\n                \"name\": \"Double Indemnity\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Film-Noir\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An insurance salesman is seduced by a beautiful woman into a scheme to murder her husband for the insurance money.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BOTdlNjgyZGUtOTczYi00MDdhLTljZmMtYTEwZmRiOWFkYjRhXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_QL75_UX380_CR0,4,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 95,\n                \"trailer\": \"https://www.youtube.com/watch?v=yKrrAa2o9Eg\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e657\",\n                \"id\": 46,\n                \"tag\": \"movie\",\n                \"name\": \"North by Northwest\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Mystery\"\n                ],\n                \"about\": \"An advertising executive is mistaken for a government agent and pursued by foreign spies across the country.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZDA3NDExMTUtMDlhOC00MmQ5LWExZGUtYmI1NGVlZWI4OWNiXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX380_CR0,11,380,562_.jpg\",\n                \"imdb\": 8.3,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=ek7T9Gyl_e4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e658\",\n                \"id\": 47,\n                \"tag\": \"movie\",\n                \"name\": \"Spider-Man: No Way Home\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"With his identity exposed, Peter Parker seeks Doctor Strange's help, but the spell goes wrong, opening the multiverse and bringing past foes into his world.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 71,\n                \"trailer\": \"https://www.youtube.com/watch?v=JfVOs4VSpmA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e659\",\n                \"id\": 48,\n                \"tag\": \"movie\",\n                \"name\": \"Some Like It Hot\",\n                \"genre\": [\n                    \"Comedy\",\n                    \"Music\",\n                    \"Romance\"\n                ],\n                \"about\": \"Two musicians witness a mob hit and disguise themselves as women to escape, joining an all-female band.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/hVIKyTK13AvOGv7ICmJjK44DTzp.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=rI_lUHut_u4\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e65a\",\n                \"id\": 49,\n                \"tag\": \"movie\",\n                \"name\": \"All About Eve\",\n                \"genre\": [\n                    \"Drama\"\n                ],\n                \"about\": \"A conniving young actress schemes her way to the top of the theater world, manipulating those around her.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTY2MTAzODI5NV5BMl5BanBnXkFtZTgwMjM4NzQ0MjE@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"99%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=L521yWTsK58\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e65b\",\n                \"id\": 50,\n                \"tag\": \"movie\",\n                \"name\": \"Raging Bull\",\n                \"genre\": [\n                    \"Biography\",\n                    \"Drama\",\n                    \"Sport\"\n                ],\n                \"about\": \"The tumultuous life of boxer Jake LaMotta, whose self-destructive tendencies alienate him from those closest to him.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1WV7WlTS8LI1L5NkCgjWT9GSW3O.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=yUp6d79WRVI\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e65c\",\n                \"id\": 51,\n                \"tag\": \"movie\",\n                \"name\": \"The Treasure of the Sierra Madre\",\n                \"genre\": [\n                    \"Adventure\",\n                    \"Drama\",\n                    \"Western\"\n                ],\n                \"about\": \"Two down-and-out Americans convince an old prospector to help them mine for gold in Mexico, but their greed soon leads to paranoia and conflict.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/pWcst7zVbi8Z8W6GFrdNE7HHRxL.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"100%\",\n                \"metacritic\": 98,\n                \"trailer\": \"https://www.youtube.com/watch?v=4y-5oY4T6wA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e65d\",\n                \"id\": 52,\n                \"tag\": \"movie\",\n                \"name\": \"Gone with the Wind\",\n                \"genre\": [\n                    \"Drama\",\n                    \"History\",\n                    \"Romance\"\n                ],\n                \"about\": \"A manipulative woman and a roguish man conduct a turbulent romance during the American Civil War and Reconstruction periods.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BYjUyZWZkM2UtMzYxYy00ZmQ3LWFmZTQtOGE2YjBkNjA3YWZlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,11,380,562_.jpg\",\n                \"imdb\": 8.1,\n                \"tomatometer\": \"90%\",\n                \"metacritic\": 97,\n                \"trailer\": \"https://www.youtube.com/watch?v=0X94oZgNBVU\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 50,\n            \"total\": 32,\n            \"pages\": 1\n        }\n    }\n}"
+            },
+            {
+              "id": "02db455b-6056-45e9-8b0b-6bcf7a2d32b1",
+              "name": "getAllMoviesByGenre",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies?genre=Fantasy",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies"
+                  ],
+                  "query": [
+                    {
+                      "key": "genre",
+                      "value": "Fantasy"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "89"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:44:36 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763052771"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "3106"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c22-OvRekybfkFWwbNC4ILw9gCW0/sw\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"movies\": [\n            {\n                \"_id\": \"6913087b6d019a70be65e62d\",\n                \"id\": 4,\n                \"tag\": \"tvseries\",\n                \"name\": \"Game of Thrones\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Drama\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg\",\n                \"imdb\": 9.3,\n                \"tomatometer\": \"89%\",\n                \"metacritic\": 82,\n                \"trailer\": \"https://www.youtube.com/watch?v=KPLWWIOooZE\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e634\",\n                \"id\": 11,\n                \"tag\": \"tvseries\",\n                \"name\": \"The Twilight Zone\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Fantasy\",\n                    \"Horror\",\n                    \"Thriller\"\n                ],\n                \"about\": \"An anthology series dealing with various paranormal and science fiction stories, often with a twist ending.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/7uY4pCOxbEdv4M8jTE4uMPVoSIW.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"97%\",\n                \"metacritic\": 80,\n                \"trailer\": \"https://www.youtube.com/watch?v=c6Y4z22Jz_A\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e647\",\n                \"id\": 30,\n                \"tag\": \"movie\",\n                \"name\": \"It's a Wonderful Life\",\n                \"genre\": [\n                    \"Drama\",\n                    \"Family\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BZjc4NDZhZWMtNGEzYS00ZWU2LThlM2ItNTA0YzQ0OTExMTE2XkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_QL75_UY562_CR3,0,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 89,\n                \"trailer\": \"https://www.youtube.com/watch?v=iLR3gZrU2Xo\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e648\",\n                \"id\": 31,\n                \"tag\": \"movie\",\n                \"name\": \"Star Wars: Episode IV - A New Hope\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the evil Darth Vader.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_QL75_UX380_CR0,9,380,562_.jpg\",\n                \"imdb\": 8.6,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=1g3_CFmnU7k\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e658\",\n                \"id\": 47,\n                \"tag\": \"movie\",\n                \"name\": \"Spider-Man: No Way Home\",\n                \"genre\": [\n                    \"Action\",\n                    \"Adventure\",\n                    \"Fantasy\"\n                ],\n                \"about\": \"With his identity exposed, Peter Parker seeks Doctor Strange's help, but the spell goes wrong, opening the multiverse and bringing past foes into his world.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg\",\n                \"imdb\": 8.2,\n                \"tomatometer\": \"93%\",\n                \"metacritic\": 71,\n                \"trailer\": \"https://www.youtube.com/watch?v=JfVOs4VSpmA\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 50,\n            \"total\": 5,\n            \"pages\": 1\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "getMovieStats",
+          "id": "a037f15e-961f-4d04-9212-5cb0f4757d4c",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "id": "7d486e08-254f-4f04-8798-a52893c74aa6",
+              "name": "getMovieStats",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies/stats",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies",
+                    "stats"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "98"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:32:10 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763052158"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1400"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"578-ekf1gizdVwJSIrSeFOjt08ZPJ04\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"totalMovies\": 32,\n        \"totalTVSeries\": 20,\n        \"total\": 52,\n        \"genreStats\": [\n            {\n                \"genre\": \"Drama\",\n                \"count\": 33\n            },\n            {\n                \"genre\": \"Crime\",\n                \"count\": 11\n            },\n            {\n                \"genre\": \"Comedy\",\n                \"count\": 11\n            },\n            {\n                \"genre\": \"Adventure\",\n                \"count\": 11\n            },\n            {\n                \"genre\": \"Thriller\",\n                \"count\": 10\n            },\n            {\n                \"genre\": \"Action\",\n                \"count\": 8\n            },\n            {\n                \"genre\": \"Sci-Fi\",\n                \"count\": 7\n            },\n            {\n                \"genre\": \"Fantasy\",\n                \"count\": 5\n            },\n            {\n                \"genre\": \"Romance\",\n                \"count\": 5\n            },\n            {\n                \"genre\": \"Animation\",\n                \"count\": 4\n            }\n        ],\n        \"topRated\": [\n            {\n                \"_id\": \"6913087b6d019a70be65e62a\",\n                \"tag\": \"tvseries\",\n                \"name\": \"Breaking Bad\",\n                \"poster\": \"https://www.themoviedb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg\",\n                \"imdb\": 9.5\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62c\",\n                \"tag\": \"tvseries\",\n                \"name\": \"The Wire\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/4lbclFySvugI51fwsyxBTOm4DqK.jpg\",\n                \"imdb\": 9.3\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62b\",\n                \"tag\": \"movie\",\n                \"name\": \"The Shawshank Redemption\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg\",\n                \"imdb\": 9.3\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62d\",\n                \"tag\": \"tvseries\",\n                \"name\": \"Game of Thrones\",\n                \"poster\": \"https://www.themoviedb.org/t/p/w1280/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg\",\n                \"imdb\": 9.3\n            },\n            {\n                \"_id\": \"6913087b6d019a70be65e62e\",\n                \"tag\": \"movie\",\n                \"name\": \"The Godfather\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR8,0,380,562_.jpg\",\n                \"imdb\": 9.2\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "getAllUniqueGenres",
+          "id": "3bb778be-b043-4bda-bd87-9b9278c19a73",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "id": "0f9d9bca-051f-422f-84f6-b62245587871",
+              "name": "getAllUniqueGenres",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies/genres",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies",
+                    "genres"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "96"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:32:57 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763052158"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "227"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"e3-bq7q587o34CUiAaux3aJGWzHTJ8\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": [\n        \"Action\",\n        \"Adventure\",\n        \"Animation\",\n        \"Biography\",\n        \"Comedy\",\n        \"Crime\",\n        \"Drama\",\n        \"Family\",\n        \"Fantasy\",\n        \"Film-Noir\",\n        \"History\",\n        \"Horror\",\n        \"Music\",\n        \"Musical\",\n        \"Mystery\",\n        \"Romance\",\n        \"Sci-Fi\",\n        \"Sport\",\n        \"Thriller\",\n        \"War\",\n        \"Western\"\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "movieSearch",
+          "id": "0bb20b0b-c92d-4095-abe2-adc7763884c4",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "id": "1dc99cf8-61bb-4fc7-bfa5-36684ce93f17",
+              "name": "simpleNameSearch",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies/search?q=batman",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "batman"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "94"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:34:27 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763052158"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "623"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"26f-YraQne6GJW5jlMtgMBn6EFYNrVo\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"movies\": [\n            {\n                \"_id\": \"6913087b6d019a70be65e631\",\n                \"id\": 8,\n                \"tag\": \"movie\",\n                \"name\": \"The Dark Knight\",\n                \"genre\": [\n                    \"Action\",\n                    \"Crime\",\n                    \"Drama\"\n                ],\n                \"about\": \"Batman battles the Joker, a criminal mastermind who plunges Gotham City into chaos.\",\n                \"poster\": \"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg\",\n                \"imdb\": 9,\n                \"tomatometer\": \"94%\",\n                \"metacritic\": 84,\n                \"trailer\": \"https://www.youtube.com/watch?v=EXeTwQWrcwY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\",\n                \"score\": 0.5555555555555556\n            }\n        ],\n        \"query\": \"batman\",\n        \"resultCount\": 1\n    }\n}"
+            },
+            {
+              "id": "c636387b-ba61-4607-8347-3e143ec751ea",
+              "name": "taggedQuerySearch",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies/search?q=break&tag=tvseries",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "break"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "tvseries"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "99"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:57:06 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763053671"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "654"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"28e-D0gkcLSe5nYyHa6PV3YaE9390C0\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"movies\": [\n            {\n                \"_id\": \"6913087b6d019a70be65e62a\",\n                \"id\": 1,\n                \"tag\": \"tvseries\",\n                \"name\": \"Breaking Bad\",\n                \"genre\": [\n                    \"Crime\",\n                    \"Drama\",\n                    \"Thriller\"\n                ],\n                \"about\": \"A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.\",\n                \"poster\": \"https://www.themoviedb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg\",\n                \"imdb\": 9.5,\n                \"tomatometer\": \"96%\",\n                \"metacritic\": 90,\n                \"trailer\": \"https://www.youtube.com/watch?v=HhesaQXLuRY\",\n                \"__v\": 0,\n                \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n                \"updatedAt\": \"2025-11-11T09:57:15.799Z\",\n                \"score\": 0.75\n            }\n        ],\n        \"query\": \"break\",\n        \"resultCount\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "getMovieById",
+          "id": "a0d2adb6-c0ce-4f86-bc23-8aa6175d2b9e",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "id": "6f3e77d1-cfb3-457f-9061-0c4902c6ae22",
+              "name": "getMovieById",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5001/api/movies/5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5001",
+                  "path": [
+                    "api",
+                    "movies",
+                    "5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15552000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "86"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Nov 2025 16:47:31 GMT"
+                },
+                {
+                  "key": "X-RateLimit-Reset",
+                  "value": "1763052771"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "606"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"25e-GfaYh5xtBtBR6q28f7ZNrNAfarA\""
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6913087b6d019a70be65e62e\",\n        \"id\": 5,\n        \"tag\": \"movie\",\n        \"name\": \"The Godfather\",\n        \"genre\": [\n            \"Crime\",\n            \"Drama\"\n        ],\n        \"about\": \"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.\",\n        \"poster\": \"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR8,0,380,562_.jpg\",\n        \"imdb\": 9.2,\n        \"tomatometer\": \"97%\",\n        \"metacritic\": 100,\n        \"trailer\": \"https://www.youtube.com/watch?v=sY1S34973zA\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-11T09:57:15.799Z\",\n        \"updatedAt\": \"2025-11-11T09:57:15.799Z\"\n    }\n}"
+            }
+          ]
+        }
+      ],
+      "id": "f9d53c67-424f-46f1-a8ae-35af77e63de6",
+      "description": "Movie APIs"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "17133567-38dd-4c1d-8716-6a3ca9cdaf2e",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "0f112de0-3ecb-496d-8c0c-d2db620c62bd",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
