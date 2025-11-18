@@ -30,6 +30,9 @@ const movieSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  horizontal: {
+    type: String
+  },
   imdb: {
     type: Number,
     required: true,

@@ -51,7 +51,7 @@ const Carousel = ({ movies = [], currentUser, isInWatchlist, onToggleWatchLater,
         <div 
           className={styles['carousel-background']}
           style={{
-            backgroundImage: `url(${currentMovie.poster})`,
+            backgroundImage: `url(${currentMovie.horizontal})`,
           }}
         />
         
