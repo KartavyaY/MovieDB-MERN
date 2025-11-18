@@ -110,7 +110,7 @@ const Carousel = ({ movies = [], currentUser, isInWatchlist, onToggleWatchLater,
                   onToggleWatchLater(currentMovie.id)
                 }}
               >
-                {currentUser && isInWatchlist(currentMovie.id) ? '✓ In List' : '+ Add to List'}
+                {currentUser && isInWatchlist(currentMovie.id) ? 'In List' : '+ Add to List'}
               </button>
             </div>
           </div>

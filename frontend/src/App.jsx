@@ -363,7 +363,7 @@ const AppContent = () => {
 
       {/* Carousel - only show when not loading and not searching and on main views */}
       {!isLoading && !searchTerm.trim() && currentFilter !== 'mylist' && filteredMovies.length > 0 && (
-        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 50px' }}>
+        <div className={styles['carousel-container-wrapper']}>
           <Carousel 
             movies={movies} 
             currentUser={currentUser}

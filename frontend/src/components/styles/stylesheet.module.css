@@ -875,6 +875,12 @@
 }
 
 /* Carousel Styles */
+.carousel-container-wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 50px 
+}
+
 .carousel-container {
     padding: 20px;
     margin: 20px 0 40px 0;
@@ -1014,7 +1020,8 @@
     background-color: #2d3e61;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     font-family: "TASA Explorer", serif;
     font-size: 16px;
@@ -1084,7 +1091,7 @@
 
 .carousel-dots {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1114,8 +1121,20 @@
 
 /* Carousel Mobile Styles */
 @media screen and (max-width: 794px) {
+
+    .carousel-container-wrapper{
+        padding: 15px;
+        margin: -30px auto;
+    }
+
+    .carousel-container{
+        border-radius: 35px;
+        padding: 15px;
+        
+    }
     .carousel-slide {
         height: 600px;
+        border-radius: 25px;
     }
 
     .carousel-genres{
@@ -1155,46 +1174,6 @@
     }
 }
 
-@media screen and (max-width: 490px) {
-    .carousel-slide {
-        height: 350px;
-    }
-    
-    .carousel-content {
-        padding: 30px 20px;
-    }
-    
-    .carousel-title {
-        font-size: 24px;
-    }
-    
-    .carousel-meta {
-        margin-bottom: 12px;
-    }
-    
-    .carousel-ratings {
-        gap: 16px;
-    }
-    
-    .carousel-imdb,
-    .carousel-tomatometer,
-    .carousel-metacritic {
-        font-size: 14px;
-        gap: 6px;
-    }
-    
-    .carousel-imdb img,
-    .carousel-tomatometer img,
-    .carousel-metacritic img {
-        width: 28px;
-        height: 28px;
-    }
-    
-    .carousel-description {
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
-    }
-}
 
 /* Floating Action Button Styles */
 .fab-filter {
