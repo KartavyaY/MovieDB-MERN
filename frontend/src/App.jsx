@@ -6,6 +6,8 @@ import SearchContainer from './components/SearchContainer'
 import LoadingSpinner from './components/LoadingSpinner'
 import EmptyState from './components/EmptyState'
 import AuthModal from './components/AuthModal'
+import GenreFilter from './components/GenreFilter'
+import Carousel from './components/Carousel'
 import { movieAPI } from './config/api'
 import styles from './components/styles/stylesheet.module.css'
 
@@ -21,19 +23,52 @@ const AppContent = () => {
   const [isInitialLoading, setIsInitialLoading] = useState(true)
   const [searchTimeout, setSearchTimeout] = useState(null)
   const [isAuthModalVisible, setIsAuthModalVisible] = useState(false)
+  const [isGenreFilterVisible, setIsGenreFilterVisible] = useState(false)
+  const [selectedGenres, setSelectedGenres] = useState([])
   const [error, setError] = useState(null)
 
   // Auth context
   const { currentUser, userProfile, isInWatchlist, addToWatchlist, removeFromWatchlist } = useAuth()
 
   // Fetch movies from API
-  const fetchMovies = async (filters = {}) => {
+  const fetchMovies = async (filters = {}, genreFilters = null) => {
     try {
       setError(null)
+      
       const response = await movieAPI.getMovies(filters)
       const movieData = response.data.data.movies
-      setMovies(movieData)
-      setFilteredMovies(movieData)
+      
+      // Use passed genreFilters or current selectedGenres
+      const genres = genreFilters !== null ? genreFilters : selectedGenres
+
+      // Helper to sort movies by how many selected genres they include
+      const sortByMatchCount = (list, genresList) => {
+        if (!genresList || genresList.length === 0) return list
+        return list
+          .map(m => ({
+            movie: m,
+            __matchCount: (m.genre || []).filter(g => genresList.includes(g)).length
+          }))
+          .filter(x => x.__matchCount > 0)
+          .sort((a, b) => b.__matchCount - a.__matchCount)
+          .map(x => x.movie)
+      }
+
+      // Apply genre filters if any are selected and not on mylist
+      if (genres.length > 0 && currentFilter !== 'mylist') {
+        // Filter by selected genres (movies that have at least one of the selected genres)
+        const genreFilteredMovies = movieData.filter(movie => {
+          const movieGenres = movie.genre || []
+          return movieGenres.some(genre => genres.includes(genre))
+        })
+
+        const sorted = sortByMatchCount(genreFilteredMovies, genres)
+        setMovies(movieData)
+        setFilteredMovies(sorted)
+      } else {
+        setMovies(movieData)
+        setFilteredMovies(movieData)
+      }
     } catch (error) {
       console.error('Error fetching movies:', error)
       setError('Failed to load movies. Please try again.')
@@ -43,18 +78,36 @@ const AppContent = () => {
   }
 
   // Search movies
-  const searchMovies = async (query, filters = {}) => {
+  const searchMovies = async (query, filters = {}, genreFilters = null) => {
     try {
       setError(null)
       setIsLoading(true)
       
       if (!query.trim()) {
-        await fetchMovies(filters)
+        await fetchMovies(filters, genreFilters)
         return
       }
 
       const response = await movieAPI.searchMovies(query, filters)
-      const movieData = response.data.data.movies
+      let movieData = response.data.data.movies
+      
+      // Use passed genreFilters or current selectedGenres
+      const genres = genreFilters !== null ? genreFilters : selectedGenres
+
+      // When filtering by genres, prioritize movies with more matches
+      if (genres.length > 0) {
+        const withMatches = movieData
+          .map(m => ({
+            movie: m,
+            __matchCount: (m.genre || []).filter(g => genres.includes(g)).length
+          }))
+          .filter(x => x.__matchCount > 0)
+          .sort((a, b) => b.__matchCount - a.__matchCount)
+          .map(x => x.movie)
+
+        movieData = withMatches
+      }
+
       setFilteredMovies(movieData)
     } catch (error) {
       console.error('Error searching movies:', error)
@@ -68,8 +121,6 @@ const AppContent = () => {
   useEffect(() => {
     fetchMovies()
   }, [])
-
-  // Handle filter changes
   const handleFilterChange = async (filter) => {
     setCurrentFilter(filter)
     clearSearch()
@@ -169,9 +220,58 @@ const AppContent = () => {
     setIsAuthModalVisible(false)
   }
 
-  if (isInitialLoading) {
-    return <LoadingSpinner isVisible={true} />
+  // Genre filter functions
+  const showGenreFilter = () => {
+    setIsGenreFilterVisible(true)
   }
+
+  const hideGenreFilter = () => {
+    setIsGenreFilterVisible(false)
+  }
+
+  const applyGenreFilters = async (genres) => {
+    setSelectedGenres(genres)
+    
+    // Refresh current view with genre filters applied immediately
+    if (searchTerm.trim()) {
+      // If we're currently searching, re-run search with new genre filters
+      const filters = {}
+      if (currentFilter !== 'all' && currentFilter !== 'mylist') {
+        filters.tag = currentFilter
+      }
+      await searchMovies(searchTerm, filters, genres)
+    } else {
+      // If not searching, refresh the current filter with new genre filters
+      const filters = {}
+      if (currentFilter !== 'all' && currentFilter !== 'mylist') {
+        filters.tag = currentFilter
+      }
+      
+      if (currentFilter === 'mylist') {
+        // For watchlist, filter user's watchlist by genres
+        if (userProfile?.watchlist) {
+          if (genres.length > 0) {
+            const genreFilteredWatchlist = userProfile.watchlist
+              .map(m => ({ movie: m, __matchCount: (m.genre || []).filter(g => genres.includes(g)).length }))
+              .filter(x => x.__matchCount > 0)
+              .sort((a, b) => b.__matchCount - a.__matchCount)
+              .map(x => x.movie)
+
+            setFilteredMovies(genreFilteredWatchlist)
+          } else {
+            setFilteredMovies(userProfile.watchlist)
+          }
+        } else {
+          setFilteredMovies([])
+        }
+      } else {
+        // For regular categories, fetch with genre filters
+        await fetchMovies(filters, genres)
+      }
+    }
+  }
+
+  // Handle filter changes
 
   return (
     <>
@@ -188,6 +288,55 @@ const AppContent = () => {
         onClear={clearSearch}
         onHide={hideSearch}
       />
+
+      {/* Active Filters Display - only show when filters are applied */}
+      {selectedGenres.length > 0 && (
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          margin: '20px 0',
+          gap: '15px',
+          flexWrap: 'wrap',
+          alignItems: 'center'
+        }}>
+          <div style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            gap: '8px', 
+            alignItems: 'center',
+            maxWidth: '600px',
+            justifyContent: 'center'
+          }}>
+            <span style={{ 
+              fontSize: '14px', 
+              color: '#666', 
+              fontFamily: 'TASA Explorer, serif',
+              marginRight: '5px'
+            }}>
+              Active filters:
+            </span>
+            {selectedGenres.map(genre => (
+              <span key={genre} className={styles['capsule']}>
+                {genre}
+              </span>
+            ))}
+            <button
+              onClick={() => applyGenreFilters([])}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: '#0c54ed',
+                cursor: 'pointer',
+                textDecoration: 'underline',
+                fontSize: '14px',
+                fontFamily: 'TASA Explorer, serif'
+              }}
+            >
+              Clear all
+            </button>
+          </div>
+        </div>
+      )}
 
       {error && (
         <div style={{
@@ -211,6 +360,19 @@ const AppContent = () => {
       )}
 
       <LoadingSpinner isVisible={isLoading} />
+
+      {/* Carousel - only show when not loading and not searching and on main views */}
+      {!isLoading && !searchTerm.trim() && currentFilter !== 'mylist' && filteredMovies.length > 0 && (
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 50px' }}>
+          <Carousel 
+            movies={movies} 
+            currentUser={currentUser}
+            isInWatchlist={isInWatchlist}
+            onToggleWatchLater={toggleWatchLater}
+            onShowAuth={showAuth}
+          />
+        </div>
+      )}
 
       {!isLoading && (
         <div className={styles.wrapper}>
@@ -246,6 +408,25 @@ const AppContent = () => {
         isVisible={isAuthModalVisible}
         onClose={hideAuth}
       />
+
+      <GenreFilter
+        isVisible={isGenreFilterVisible}
+        onClose={hideGenreFilter}
+        onApplyFilters={applyGenreFilters}
+        selectedGenres={selectedGenres}
+      />
+
+      {/* Fixed Floating Action Button for Filter */}
+      <button 
+        className={`${styles['fab-filter']} ${selectedGenres.length > 0 ? styles['fab-active'] : ''}`}
+        onClick={showGenreFilter}
+        title="Filter by Genres"
+      >
+        <img src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-4/512/filter-icon.png" alt="Filter" className={styles['fab-icon']} />
+        {selectedGenres.length > 0 && (
+          <span className={styles['fab-badge']}>{selectedGenres.length}</span>
+        )}
+      </button>
     </>
   )
 }

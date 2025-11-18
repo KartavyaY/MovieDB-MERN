@@ -2,7 +2,7 @@
 import styles from './styles/stylesheet.module.css'
 
 const Card = ({ movie, isInMyList, onToggleWatchLater }) => {
-  const buttonText = isInMyList ? 'Remove from List' : 'Watch Later'
+  const buttonText = isInMyList ? 'Remove from List' : 'Add to List'
   const buttonClass = isInMyList ? `${styles.readmore} ${styles.remove}` : styles.readmore
 
   return (
