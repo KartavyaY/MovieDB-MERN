@@ -10,6 +10,10 @@ const { initializeFirebase } = require('./middleware/auth');
 const app = express();
 const PORT = process.env.PORT || 5001;
 
+// Trust proxy only for Cloudflare (more secure than 'true')
+// This allows proper IP detection while preventing abuse
+app.set('trust proxy', 1);
+
 // Initialize Firebase Admin SDK
 initializeFirebase();
 
@@ -19,13 +23,31 @@ app.use(helmet());
 // Rate limiting - more permissive for development
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 1000, // increased limit for development
-  standardHeaders: true,
-  legacyHeaders: false,
+  max: 100, // limit each IP to 100 requests per windowMs
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  // Configure for Cloudflare proxy
+  skip: (req) => {
+    // Skip rate limiting for health checks
+    return req.url === '/api/health';
+  },
+  keyGenerator: (req) => {
+    // Use the real IP from Cloudflare
+    return req.ip || req.connection.remoteAddress;
+  }
 });
 app.use('/api/', limiter);
 
-// CORS configuration - more permissive for development
+// CORS configuration
+const allowedOrigins = [
+  process.env.FRONTEND_URL || 'http://localhost:5173',
+  process.env.FRONTEND_URL_DEV || 'http://localhost:5173',
+  process.env.PRODUCTION_DOMAIN || 'https://kartavyayadav.in',
+  'https://kartavyayadav.in',
+  'https://www.kartavyayadav.in',
+  'http://localhost:5173' // Always allow localhost for development
+];
+
 app.use(cors({
   origin: [
     process.env.FRONTEND_URL || 'http://localhost:5173',
