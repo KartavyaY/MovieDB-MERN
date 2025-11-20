@@ -76,7 +76,7 @@ export const movies = [
         ],
         "about": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
         "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR8,0,380,562_.jpg",
-        "horizontal":"https://wallpapercave.com/wp/wp14096109.jpg",
+        "horizontal":"https://4kwallpapers.com/images/walls/thumbs_3t/13940.jpg",
         "imdb": 9.2,
         "tomatometer": "97%",
         "metacritic": 100,
