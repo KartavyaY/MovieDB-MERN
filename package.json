@@ -17,10 +17,17 @@
     "start": "npm run backend:start & npm run frontend:dev",
     "build": "npm run frontend:build"
   },
-  "keywords": ["react", "nodejs", "mongodb", "firebase", "movies", "fullstack"],
+  "keywords": [
+    "react",
+    "nodejs",
+    "mongodb",
+    "firebase",
+    "movies",
+    "fullstack"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.2"
   }
 }
