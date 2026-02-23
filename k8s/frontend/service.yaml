@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: moviedb
+  labels:
+    app: frontend
+spec:
+  selector:
+    app: frontend
+  ports:
+    - name: http
+      port: 5173
+      targetPort: 5173
+  # LoadBalancer on Docker Desktop binds to localhost:5173 automatically
+  type: LoadBalancer
