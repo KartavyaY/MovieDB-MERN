@@ -1,14 +1,9 @@
 #!/bin/bash
 
-# Quick run script for Movie Browser
-# Use this when everything is already set up
+echo "Starting Jenkins..."
+docker start jenkins
 
-echo "🎬 Starting Movie Browser..."
-echo "Backend: http://localhost:5001"
-echo "Frontend: http://localhost:5173"
 echo ""
-echo "Press Ctrl+C to stop both servers"
-echo ""
-
-# Start both frontend and backend concurrently
-npm run dev
+echo "Jenkins: http://localhost:8080"
+echo "Go to Jenkins and click Build Now to start the app"
+echo "App will be available at http://localhost:5173 after build"
