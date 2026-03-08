@@ -56,3 +56,24 @@ kubectl create secret generic backend-secrets \
   --dry-run=client -o yaml | kubectl apply -f -
 
 echo "✅ backend-secrets created/updated successfully."
+
+# ── Frontend ConfigMap (Firebase client config) ────────────
+FRONTEND_ENV_FILE="$SCRIPT_DIR/../frontend/.env"
+
+if [ ! -f "$FRONTEND_ENV_FILE" ]; then
+  echo "❌ ERROR: frontend/.env not found at: $FRONTEND_ENV_FILE"
+  exit 1
+fi
+
+echo "📖 Reading Firebase client config from frontend/.env..."
+
+# Export vars so envsubst can see them
+set -a
+# shellcheck source=/dev/null
+source "$FRONTEND_ENV_FILE"
+set +a
+
+echo "🔧 Applying frontend ConfigMap with substituted values..."
+envsubst < "$SCRIPT_DIR/frontend/configmap.yaml" | kubectl apply -f -
+
+echo "✅ frontend-config ConfigMap created/updated successfully."
