@@ -11,6 +11,9 @@ JENKINS_JOB="Movie-DB"
 echo "Starting Jenkins..."
 docker start jenkins
 
+echo "Fixing Docker socket permissions..."
+docker exec -u root jenkins chmod 666 /var/run/docker.sock
+
 echo "Waiting for Jenkins to be ready..."
 until curl -s -o /dev/null -w "%{http_code}" "$JENKINS_URL/login" | grep -q "200"; do
   sleep 3
